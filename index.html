@@ -27,13 +27,31 @@
                     <li class="user-nav-item">
                         <a href="#">Поиск</a>
                         <div>
-                            <!--Здесь будет форма-->
+                            <form method="POST">
+                                <fieldset>
+                                    <legend class="visually-hidden">Поиск</legend>
+                                    <p><input type="text" id="search" name="search" placeholder="Что ищем?"></p>
+                                </fieldset>
+                            </form>
                         </div>
                     </li>
                     <li class="user-nav-item">
                         <a href="#">Вход</a>
                         <div>
-                            <!--Здесь будет форма-->
+                            <form method="POST">
+                                <fieldset>
+                                    <legend class="visually-hidden">Вход</legend>
+                                    <p>
+                                        <label class="visually-hidden" for="user-email">Электронная почта</label>
+                                        <input type="email" id="user-email" name="user-email" placeholder="Электронная почта">
+                                    </p>
+                                    <p>
+                                        <label class="visually-hidden" for="user-password">Пароль</label>
+                                        <input type="password" id="user-password" name="user-password" placeholder="Пароль">
+                                    </p>
+                                    <button type="submit">Войти</button>
+                                </fieldset>
+                            </form>
                             <a href="#">Забыли пароль?</a>
                             <a href="#">Новая регистрация</a>
                         </div>
@@ -55,28 +73,52 @@
                 <div class="slide">
                     <img src="img/slide-1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="1045" height="881">
                     <p>Крем-брюле и пломбир с малиновым джемом</p>
-                    <button class="btn">Давайте оба!</button>
-                    <a class="slider-control">Первый слайд</a>
-                    <a class="slider-control" href="#">Второй слайд</a>
-                    <a class="slider-control" href="#">Третий слайд</a>
+                    <ul class="slides-switches">
+                        <li class="slide-radio">
+                            <button type="button" class="slide-btn">Первый слайд</button>
+                        </li>
+                        <li class="slide-radio">
+                            <button type="button" class="slide-btn">Второй слайд</button>
+                        </li>
+                        <li class="slide-radio">
+                            <button type="button" class="slide-btn">Третий слайд</button>
+                        </li>
+                    </ul>
+                    <a href="#">Давайте оба!</a>
                 </div>
 
                 <div class="slide">
                     <img src="img/slide-2.png" alt="Шоколадный пломбир и лимонный сорбет" width="1045" height="881">
                     <p>Шоколадный пломбир и лимонный сорбет</p>
-                    <button class="btn">Давайте оба!</button>
-                    <a class="slider-control" href="#">Первый слайд</a>
-                    <a class="slider-control">Второй слайд</a>
-                    <a class="slider-control" href="#">Третий слайд</a>
+                    <ul class="slides-switches">
+                        <li class="slide-radio">
+                            <button type="button" class="slide-btn">Первый слайд</button>
+                        </li>
+                        <li class="slide-radio">
+                            <button type="button" class="slide-btn">Второй слайд</button>
+                        </li>
+                        <li class="slide-radio">
+                            <button type="button" class="slide-btn">Третий слайд</button>
+                        </li>
+                    </ul>
+                    <a href="#">Давайте оба!</a>
                 </div>
 
                 <div class="slide">
                     <img src="img/slide-3.png" alt="Пломбир с помадкой и клубничный щербет" width="1045" height="881">
                     <p>Пломбир с помадкой и клубничный щербет</p>
-                    <button class="btn">Давайте оба!</button>
-                    <a class="slider-control" href="#">Первый слайд</a>
-                    <a class="slider-control" href="#">Второй слайд</a>
-                    <a class="slider-control">Третий слайд</a>
+                    <ul class="slides-switches">
+                        <li class="slide-radio">
+                            <button type="button" class="slide-btn">Первый слайд</button>
+                        </li>
+                        <li class="slide-radio">
+                            <button type="button" class="slide-btn">Второй слайд</button>
+                        </li>
+                        <li class="slide-radio">
+                            <button type="button" class="slide-btn">Третий слайд</button>
+                        </li>
+                    </ul>
+                    <a href="#">Давайте оба!</a>
                 </div>
             </section>
 
@@ -180,7 +222,15 @@
                     всего самого вкусного, что у нас происходит. Обещаем не спамить 
                     и не слать всякой ненужной ерунды. Честно =) 
                 </p>
-                <!--Здесь будет форма-->
+                <form method="POST">
+                    <fieldset>
+                        <legend class="visually-hidden">Подписка на рассылку</legend>
+                        <p>
+                            <label class="visually-hidden" for="mailing-email">Email</label>
+                            <input type="email" id="mailing-email" name="mailing-email" placeholder="Электронная почта">
+                        </p>
+                    </fieldset>
+                </form>
             </section>
 
             <section class="map">
@@ -229,7 +279,24 @@
         <section class="modal modal-feedback">
             <h2 class="visually-hidden">Обратная связь</h2>
             <p>Мы обязательно вам ответим!</p>
-            <!--Здесь будет форма-->
+            <form method="POST">
+                <fieldset>
+                    <legend class="visually-hidden">Форма обратной связи</legend>
+                    <p>
+                        <label class="visually-hidden" for="feedback-name">Имя</label>
+                        <input type="text" id="feedback-name" name="feedback-name" placeholder="Как вас зовут?">
+                    </p>
+                    <p>
+                        <label class="visually-hidden" for="feedback-email">Email</label>
+                        <input type="email" id="feedback-email" name="feedback-email" placeholder="Ваша почта для ответа?">
+                    </p>
+                    <p>
+                        <label class="visually-hidden" for="feedback-text">Текст сообщения</label>
+                        <textarea id="feedback-text" name="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+                    </p>
+                    <button type="submit">Отправить</button>
+                </fieldset>
+            </form>
             <button class="btn">x</button>
         </section>
     </body>
