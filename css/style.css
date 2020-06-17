@@ -18,6 +18,7 @@ a {
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
 fieldset {
@@ -38,15 +39,17 @@ fieldset {
 
 .button {
     position: relative;
+    padding: 10px 25px;
+
     font-family: inherit;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
-    height: 44px;
     color: #fefefe;
+
     background-image: linear-gradient(to top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
-    border-radius: 20px;
+    border-radius: 25px;
     border: none;
 }
 
@@ -119,10 +122,6 @@ fieldset {
     background-color: #f6b5a5;
 }
 
-.main-nav-item {
-    vertical-align: middle;
-}
-
 .main-nav-link {
     display: inline-block;
     height: 32px;
@@ -170,6 +169,8 @@ fieldset {
     font-size: 14px;
     line-height: 24px;
     font-weight: 700;
+    width: 241px;
+    height: 44px;
     color: #323232;
     background-color: #ffffff;
     border: none;
@@ -214,3 +215,189 @@ fieldset {
     line-height: 24px;
 }
   
+.slider {
+    text-align: center;
+}
+
+.slider p {
+    font-size: 60px;
+    line-height: 60.35px;
+    font-weight: 700;
+    width: 670px;
+}
+
+.slider .button {
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 700;
+    border-radius: 30px;
+}
+
+.slider .button:hover::before,
+.slider .button:focus::before {
+    border-radius: 30px;
+} 
+
+.banners {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+}
+
+.banners h3 {
+    font-size: 35px;
+    line-height: 41px;
+}
+
+.banner {
+    width: 560px;
+    height: 229px;
+    border-radius: 15px;
+}
+
+.banner-raspberry {
+    background-color: #98334f;
+    background-image: url(../img/raspberry-bg.jpg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.banner-choco {
+    background-color: #42271a;
+    background-image: url(../img/choco-bg.jpg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.bestseller-item a {
+    display: block;
+}
+
+.bestseller-item img {
+    border-radius: 135px;
+}
+
+.goods-price {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 700;
+    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.goods-price span {
+    font-size: 30px;
+} 
+
+.goods-desc {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    box-shadow:
+    inset 0 0px #849d8f, 
+    inset 0 -1px rgba(255, 255, 255, 0.3);
+}
+
+.about-us {
+    width: 1146px;
+    height: 306px;
+    border-radius: 18px;
+
+    background-color: #ebdfc6;
+    background-image: url(../img/waffle-bg.jpg);
+    background-position: 0 0;
+    background-repeat: repeat;
+
+    color: #323232;
+    font-weight: 400;
+}
+
+.about-us p:first-of-type {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.blog {
+    width: 560px;
+    height: 220px;
+    border-radius: 10px;
+
+    background-color: #ffffff;
+    background-image: url(../img/strawberry-bg.jpg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    color: #323232;
+}
+
+.blog h2 {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.blog a {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #323232;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    display: block;
+    width: 335px;
+}
+
+.mailing {
+    position: relative;
+    width: 560px;
+    height: 220px;
+    border-radius: 15px;
+
+    color: #666666;
+    font-weight: 400;
+
+    background-color: #f8f7f4;
+    background-image: repeating-linear-gradient(-45deg, #fe9e90, #fe9e90 8px, transparent 8px, transparent 16px, #92cdff 16px, #92cdff 24px, transparent 24px, transparent 32px);   
+}
+
+.substrate {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+    width: 550px;
+    height: 210px;
+    border-radius: 15px;
+    
+    background-color: #f8f7f4;
+}
+
+.mailing input {
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    width: 241px;
+    height: 44px;
+    color: #323232;
+    background-color: #ffffff;
+    border: none;
+    box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
+    border-radius: 6px;
+}
+
+.mailing input:hover {
+    box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
+}
+
+.mailing input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+    font-weight: 700;
+    color: #323232;
+}
+
+.mailing input::placeholder {
+    font-weight: 400;
+    color: #999999;
+}
