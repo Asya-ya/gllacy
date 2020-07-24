@@ -16,8 +16,14 @@ a {
     color: #ffffff;
 }
 
+a:hover, a:active, a:focus {
+    color: #ffbc9e;
+    border-color: rgba(255, 188, 158, 0.4);
+}
+
 ul {
     list-style: none;
+    margin: 0;
     padding: 0;
 }
 
@@ -39,13 +45,13 @@ fieldset {
 
 .button {
     position: relative;
-    padding: 10px 25px;
 
     font-family: inherit;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
     color: #fefefe;
+    cursor: pointer;
 
     background-image: linear-gradient(to top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
@@ -87,22 +93,30 @@ fieldset {
     box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
 }
 
+.container {
+    width: 1146px;
+    margin: 0 auto;
+    padding: 0 27px;
+}
+
 .underline {
-    box-shadow:
-    inset 0 0px #849d8f, 
-    inset 0 -1px rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.main-nav {
+    display: flex;
+}
+
+.main-nav-logo {
+    margin-right: 24px;
 }
   
 .main-nav-list {
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
-}
 
-.main-nav-list .underline {
-    box-shadow:
-    inset 0 -6px #849d8f, 
-    inset 0 -7px rgba(255, 255, 255, 0.3);
+    width: 350px;
 }
 
 .call-hidden:hover .hidden,
@@ -136,8 +150,6 @@ fieldset {
 
 .main-nav-link {
     display: inline-block;
-    height: 32px;
-    line-height: 32px;
 }
 
 .main-nav-link:hover,
@@ -154,6 +166,11 @@ fieldset {
 .main-nav-link:active {
     background-color: rgba(248, 247, 244, 0.988);
     box-shadow: inset 0px 2px 1px 0px rgb(105, 105, 105);   
+}
+
+.user-nav {
+    width: 267px;
+    margin-left: auto;
 }
 
 .user-nav-link {
@@ -210,6 +227,10 @@ fieldset {
     inset 0 -1px #adacaa;
 }
 
+.header-contacts {
+    text-align: right;
+}
+
 .header-contacts .time {
     font-size: 14px;
     line-height: 16px;
@@ -223,6 +244,7 @@ fieldset {
   
 .slider {
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .slider p {
@@ -242,23 +264,37 @@ fieldset {
 .slider .button:hover::before,
 .slider .button:focus::before {
     border-radius: 30px;
-} 
+}
 
 .banners {
+    display: flex;
+    justify-content: space-between;
+
     font-size: 18px;
     line-height: 22px;
     font-weight: 700;
+
+    margin-bottom: 40px;
 }
 
 .banners h3 {
     font-size: 35px;
     line-height: 41px;
+    margin: 0;
+    padding: 17px 0;
 }
 
 .banner {
     width: 560px;
     height: 229px;
     border-radius: 15px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.banner p {
+    margin: 0;
+    padding-bottom: 45px;
 }
 
 .banner-raspberry {
@@ -275,19 +311,46 @@ fieldset {
     background-repeat: no-repeat;
 }
 
+.banner .button {
+    float: right;
+    padding: 12px 22px;
+}
+
+.bestsellers {
+    margin-bottom: 40px;
+}
+
+.bestsellers-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bestseller-item {
+    
+    width: 267px;
+    text-align: center;
+}
+
 .bestseller-item a {
+    position: relative;
     display: block;
 }
 
 .bestseller-item img {
     border-radius: 135px;
+    margin-bottom: 14px;
 }
 
 .goods-price {
+    position: absolute;
+    bottom: 70px;
+    
     font-size: 45px;
     line-height: 45px;
     font-weight: 700;
     text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+    text-align: left;
+    margin: 0;
 }
 
 .goods-price span {
@@ -298,6 +361,7 @@ fieldset {
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
+    text-align: center;
 }
 
 .about-us {
@@ -312,12 +376,37 @@ fieldset {
 
     color: #323232;
     font-weight: 400;
+
+    margin-bottom: 40px;
+    padding: 21px 26px;
+    box-sizing: border-box;
 }
 
-.about-us p:first-of-type {
+.about-us p {
+    margin: 0;
+    padding: 0;
+}
+
+.about-us-main {
     font-size: 24px;
     line-height: 30px;
     font-weight: 500;
+}
+
+.about-us-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-us-wrapper p {
+    width: 539px;
+}
+
+.main-column {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 .blog {
@@ -410,10 +499,15 @@ fieldset {
     position: relative;
 }
 
+.map img {
+    margin: 0 -27px;
+}
+
 .contacts {
     position: absolute;
-    right: 187px;
-    top: 62px;
+    right: 0px;
+    top: 0px;
+    margin-top: 62px;
 
     width: 302px;
     height: 305px;
@@ -437,32 +531,45 @@ fieldset {
     font-weight: 700;
 }
 
+.main-footer {
+    margin-top: 36px;
+}
+
+.main-footer .container {
+    display: flex;
+}
+
+.footer-social-buttons {
+    width: 188px;
+    margin-right: 215px;
+}
+
 .footer-nav {
+    width: 333px;
     font-size: 13px;
     line-height: 18px;
     font-weight: 400;
-}
-
-.footer-nav a {
-    box-shadow: 
-    inset 0 0px #849d8f, 
-    inset 0 -1px rgba(255, 255, 255, 0.3);
 }
 
 .footer-nav li:first-child {
     font-weight: 700;
 }
 
+.footer-copyright {
+    width: 190px;
+    margin-left: auto;
+}
+
+.footer-copyright img {
+    margin-top: -18px;
+}
+
 .footer-copyright p {
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
-}
-
-.footer-copyright a {
-    box-shadow: 
-    inset 0 0px #849d8f, 
-    inset 0 -1px rgba(255, 255, 255, 0.3);
+    margin: 0;
+    padding: 0;
 }
 
 .modal {
@@ -473,6 +580,11 @@ fieldset {
     font-size: 24px;
     line-height: 28px;
     font-weight: 500;
+}
+
+.modal-feedback {
+    width: 477px;
+    height: 442px;
 }
 
 .modal input, .modal textarea {
