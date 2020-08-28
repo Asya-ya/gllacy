@@ -15,13 +15,13 @@
                     <ul class="main-nav-list">
                         <li class="main-nav-item call-hidden">
                             <a href="#" class="main-nav-link"><span class="underline">Каталог</span></a>
-                            <!-- <ul class="main-nav-submenu hidden">
-                                <li class="submenu-item"><a href="#">Новинки</a></li>
+                            <ul class="main-nav-submenu hidden dropdown">
+                                <li class="submenu-item"><span>Новинки</span></li>
                                 <li class="submenu-item"><a href="#">Сливочное</a></li>
                                 <li class="submenu-item"><a href="#">Щербеты</a></li>
                                 <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
                                 <li class="submenu-item"><a href="#">Мелорин</a></li>
-                            </ul> -->
+                            </ul>
                         </li>
                         <li class="main-nav-item">
                             <a href="#" class="main-nav-link">
@@ -50,14 +50,14 @@
                                     </g>
                                 </svg>                                   
                             </a>
-                            <!-- <div class="hidden dropdown">
+                            <div class="hidden dropdown search-block">
                                 <form method="POST">
                                     <fieldset>
                                         <legend class="visually-hidden">Поиск</legend>
                                         <p><input type="text" id="search" name="search" placeholder="Что ищем?"></p>
                                     </fieldset>
                                 </form>
-                            </div> -->
+                            </div>
                         </li>
                         <li class="user-nav-item call-hidden">
                             <a href="#" class="user-nav-link login-btn">
@@ -71,7 +71,7 @@
                                 </svg>
                                 Вход
                             </a>
-                            <!-- <div class="hidden dropdown">
+                            <div class="hidden dropdown entry-form">
                                 <form method="POST">
                                     <fieldset>
                                         <legend class="visually-hidden">Вход</legend>
@@ -83,12 +83,16 @@
                                             <label class="visually-hidden" for="user-password">Пароль</label>
                                             <input type="password" id="user-password" name="user-password" placeholder="Пароль">
                                         </p>
-                                        <button type="submit" class="button">Войти</button>
+                                        <div class="links-wrap">
+                                            <button type="submit" class="button">Войти</button>
+                                            <p>
+                                                <a class="dropdown-link" href="#">Забыли пароль?</a><br>
+                                                <a class="dropdown-link" href="#">Новая регистрация</a>
+                                            </p>                                           
+                                        </div>
                                     </fieldset>
-                                </form>
-                                <a href="#">Забыли пароль?</a><br>
-                                <a href="#">Новая регистрация</a>
-                            </div> -->
+                                </form> 
+                            </div>
                         </li>
                         <li class="user-nav-item">
                             <a href="#" class="user-nav-link basket-btn">
@@ -117,10 +121,10 @@
 
         <main class="container">
             <h1 class="visually-hidden">Магазин мороженого Gllacy</h1>
-            <section class="slider">
+            <!-- <section class="slider">
                 <h2 class="visually-hidden">Слайдер комбо предложений</h2>
                 <div class="slide">
-                    <!-- <img src="img/slide-1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="1045" height="881"> -->
+                     <img src="img/slide-1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="1045" height="881">
                     <p>Крем-брюле и пломбир с&nbsp;малиновым джемом</p>
                     <ul class="slides-switches">
                         <li class="slide-radio">
@@ -137,7 +141,7 @@
                 </div>
 
                 <div class="slide">
-                    <!-- <img src="img/slide-2.png" alt="Шоколадный пломбир и лимонный сорбет" width="1045" height="881"> -->
+                     <img src="img/slide-2.png" alt="Шоколадный пломбир и лимонный сорбет" width="1045" height="881">
                     <p>Шоколадный пломбир и&nbsp;лимонный сорбет</p>
                     <ul class="slides-switches">
                         <li class="slide-radio">
@@ -154,7 +158,7 @@
                 </div>
 
                 <div class="slide">
-                    <!-- <img src="img/slide-3.png" alt="Пломбир с помадкой и клубничный щербет" width="1045" height="881"> -->
+                     <img src="img/slide-3.png" alt="Пломбир с помадкой и клубничный щербет" width="1045" height="881">
                     <p>Пломбир с помадкой и&nbsp;клубничный щербет</p>
                     <ul class="slides-switches">
                         <li class="slide-radio">
@@ -169,7 +173,7 @@
                     </ul>
                     <a href="#" class="button">Давайте оба!</a>
                 </div>
-            </section>
+            </section> -->
 
             <section class="banners">
                 <h2 class="visually-hidden">Акционные баннеры</h2>
@@ -389,10 +393,10 @@
             </div>           
         </footer>
 
-        <!-- <section class="modal modal-feedback">
+        <section class="modal modal-feedback">
             <h2 class="visually-hidden">Обратная связь</h2>
-            <p>Мы обязательно вам ответим!</p>
-            <form method="POST">
+            <p class="feedback-text">Мы обязательно вам ответим!</p>
+            <form method="POST" class="feedback-form">
                 <fieldset>
                     <legend class="visually-hidden">Форма обратной связи</legend>
                     <p>
@@ -410,7 +414,9 @@
                     <button type="submit" class="button">Отправить</button>
                 </fieldset>
             </form>
-            <button class="btn">Закрыть форму</button>
-        </section> -->
+            <button class="modal-close"><span class="visually-hidden">Закрыть форму</span></button>
+        </section>
+
+        <div class="overlay"></div>
     </body>
 </html>
