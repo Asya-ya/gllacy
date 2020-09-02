@@ -7,8 +7,6 @@ body {
     line-height: 22px;
     font-weight: 500;
     color: #ffffff;
-
-    background-color: #849d8f;
 }
 
 a {
@@ -26,6 +24,14 @@ fieldset {
     border: none;
     margin: 0;
     padding: 0;
+}
+
+.site-wrapper {
+    background-color: #849d8f;
+    background-image: url(../img/slide-1.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    transition: background-color, 0.35s;
 }
 
 .visually-hidden {
@@ -118,7 +124,7 @@ fieldset {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 .main-nav-logo {
@@ -433,66 +439,84 @@ fieldset {
 }
   
 .slider {
+    position: relative;
     text-align: center;
     margin-bottom: 40px;
+    padding-top: 270px;
 }
 
-.slider p {
+.slider h3 {
     font-size: 60px;
     line-height: 60.35px;
     font-weight: 700;
     width: 670px;
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 .slider .button {
+    display: inline-block;
     font-size: 32px;
     line-height: 44px;
     font-weight: 700;
     border-radius: 30px;
-    padding: 13px 40px;
+    padding: 10px 40px;
 }
 
-.slide-btn {
+.slider-switches {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+}
+
+.slider-switches label {
     padding: 0;
     margin: 0;
+    font-size: 0;
     margin-right: 8px;
     display: inline-block;
-    width: 21px;
-    height: 21px;
+    width: 17px;
+    height: 17px;
     border: 2px solid #ffffff;
     border-radius: 50%;
     background-color: transparent;
     cursor: pointer;   
 }
 
-.slide-btn:disabled {
+.slider-switches label:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.slide {
+    display: none;
+}
+
+#product-1:checked~.site-wrapper label[for=product-1],
+#product-2:checked~.site-wrapper label[for=product-2],
+#product-3:checked~.site-wrapper label[for=product-3] {
+    cursor: default;
     background-color: #ffffff;
 }
 
-.slide-btn::before {
-    display: inline-block;
-    content: "";
-    width: 17px;
-    height: 17px;
-    border-radius: 50%;
+#product-1:checked~.site-wrapper #slide-1,
+#product-2:checked~.site-wrapper #slide-2,
+#product-3:checked~.site-wrapper #slide-3 {
+    display: block;
 }
 
-.slide-btn:hover::before,
-.slide-btn:focus::before,
-.slide-btn:active::before {
-    background-color: rgb(255,255,255,0.4);
+#product-1:checked~.site-wrapper {
+    background-color: #849d8f;
+    background-image: url(../img/slide-1.png);
 }
 
-.slides-switches {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+#product-2:checked~.site-wrapper {
+    background-color: #8996a6;
+    background-image: url(../img/slide-2.png);
 }
 
-.slider .button:hover::before,
-.slider .button:focus::before {
-    border-radius: 30px;
+#product-3:checked~.site-wrapper {
+    background-color: #9d8b84;
+    background-image: url(../img/slide-3.png);
 }
 
 .banners {
@@ -979,7 +1003,7 @@ fieldset {
 
 .main-footer {
     margin-top: 36px;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 .main-footer .container {
@@ -1254,7 +1278,7 @@ fieldset {
 
 .modal-close:hover {
     animation-name: rotate;
-    animation-duration: 0.3s;
+    animation-duration: 0.25s;
 }
 
 .overlay {
