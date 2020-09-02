@@ -909,10 +909,20 @@ fieldset {
 .map {
     text-align: center;
     position: relative;
+    min-height: 430px;
 }
 
 .map img {
+    position: absolute;
+    top: 0;
+    left: 0;
     margin: 0 -27px;
+    z-index: 1;
+}
+
+.map iframe {
+    margin: 0 -27px;
+    z-index: 2;
 }
 
 .contacts {
@@ -938,6 +948,7 @@ fieldset {
     line-height: 20px;
     font-weight: 400;
     text-align: left;
+    z-index: 3;
 }
 
 .contacts p {
@@ -1241,6 +1252,11 @@ fieldset {
     transform: rotate(-45deg);
 }
 
+.modal-close:hover {
+    animation-name: rotate;
+    animation-duration: 0.3s;
+}
+
 .overlay {
     display: none;
     position: fixed;
@@ -1252,4 +1268,27 @@ fieldset {
 
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 3;
+}
+
+.modal-show {
+    display: block;
+}
+
+.modal-show-animate {
+    animation-name: blur;
+    animation-duration: 0.5s;
+}
+
+@keyframes blur {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0); }
+    20% { transform: rotate(36deg); }
+    40% { transform: rotate(72deg); }
+    60% { transform: rotate(108deg); }
+    80% { transform: rotate(144deg); }
+    100% { transform: rotate(180deg); }
 }
