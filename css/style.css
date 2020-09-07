@@ -7,6 +7,7 @@ body {
     line-height: 22px;
     font-weight: 500;
     color: #ffffff;
+    background-color: #849d8f;
 }
 
 a {
@@ -44,7 +45,6 @@ fieldset {
 
 .hidden {
     display: none;
-
     overflow: hidden;
 }
 
@@ -116,8 +116,27 @@ fieldset {
     padding: 0 27px;
 }
 
-.underline {
+.link-light {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.link-light:hover,
+.link-light:focus,
+.link-light:active {
+    color: #ffbc9e;
+    border-color: rgba(255, 188, 158, 0.3);
+}
+
+.link-dark {
+    color: #323232;
+    border-bottom: 1px solid rgba(50, 50, 50, 0.3);
+}
+
+.link-dark:hover,
+.link-dark:focus,
+.link-dark:active {
+    color: #e84d37;
+    border-color: rgba(232, 77, 55, 0.3);
 }
 
 .main-nav {
@@ -165,6 +184,7 @@ fieldset {
     min-width: 143px;
     font-size: 14px;
     line-height: 16px;
+    z-index: 4;
 }
 
 .main-nav-submenu a,
@@ -222,8 +242,9 @@ fieldset {
     fill: #000000;
 }
 
-.main-nav-link:hover .underline,
-.main-nav-link:focus .underline {
+.main-nav-link:hover .link-light,
+.main-nav-link:focus .link-light {
+    color: #000000;
     border-bottom: none;
 }
 
@@ -351,8 +372,6 @@ fieldset {
     font-size: 13px;
     line-height: 24px;
     font-weight: 400;
-    color: #323232;
-    border-bottom: 1px solid rgba(50, 50, 50, 0.3);
 }
 
 .search-block {
@@ -379,6 +398,7 @@ fieldset {
     min-width: 277px;
     padding: 20px;
     box-sizing: border-box;
+    z-index: 5;
 }
 
 .entry-form p {
@@ -407,13 +427,6 @@ fieldset {
     margin-bottom: 0;
 }
 
-.links-wrap a:hover,
-.links-wrap a:focus,
-.links-wrap a:active {
-    color: #e84d37;
-    border-color: rgba(232, 77, 55, 0.3);
-}
-
 .header-contacts {
     text-align: right;
     margin: 0;
@@ -433,9 +446,10 @@ fieldset {
     line-height: 24px;
 }
 
-.phone:hover, .phone:active, .phone:focus {
+.phone:hover, 
+.phone:active, 
+.phone:focus {
     color: #ffbc9e;
-    border-color: rgba(255, 188, 158, 0.4);
 }
   
 .slider {
@@ -473,7 +487,7 @@ fieldset {
     padding: 0;
     margin: 0;
     font-size: 0;
-    margin-right: 8px;
+    margin-right: 5px;
     display: inline-block;
     width: 17px;
     height: 17px;
@@ -578,22 +592,24 @@ fieldset {
     margin-bottom: 40px;
 }
 
-.bestsellers-list {
+.bestsellers-list,
+.catalog-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.bestseller-item { 
+.product-item { 
     position: relative;
     width: 267px;
     text-align: center;
 }
 
-.bestseller-item::after {
+.product-item::after {
     position: absolute;
     top: -6px;
     left: -13px;
@@ -608,19 +624,21 @@ fieldset {
     z-index: 1;
 }
 
-.bestseller-item:hover::after,
-.bestseller-item:focus-within::after,
-.bestseller-item:active::after,
-.bestseller-item:hover .fast-view,
-.bestseller-item:focus-within .fast-view,
-.bestseller-item:active .fast-view {
+.product-item:hover::after,
+.product-item:focus-within::after,
+.product-item:active::after,
+.product-item:hover .fast-view,
+.product-item:focus-within .fast-view,
+.product-item:active .fast-view {
     display: block;
     opacity: 1;
 }
 
-.bestseller-item::before {
+.bestsellers .product-item::before {
     content: "";
     position: absolute;
+    top: 0;
+    left: 0;
     width: 61px;
     height: 61px;
     border-radius: 50%;
@@ -631,8 +649,7 @@ fieldset {
     z-index: 3;
 }
 
-.bestseller-link {
-    display: block;
+.product-link {
     position: relative;
     z-index: 3;
 }
@@ -646,17 +663,16 @@ fieldset {
     left: 32px;
 }
 
-.bestseller-item a:hover .goods-desc, 
-.bestseller-item a:active .goods-desc, 
-.bestseller-item a:focus .goods-desc {
-    color: #ffbc9e;
-    border-color: rgba(255, 188, 158, 0.3);
-    z-index: 3;
-}  
-
-.bestseller-item img {
-    border-radius: 135px;
+.product-item .img-wrap {
+    width: 267px;
+    height: 267px;
+    border-radius: 50%;
+    overflow: hidden;
     margin-bottom: 9px;
+}
+
+.product-item img {
+    transform: scale(1.017);
     position: relative;
     z-index: 2;
 }
@@ -1100,13 +1116,6 @@ fieldset {
     top: 3px;
 }
 
-.footer-nav a:hover,
-.footer-nav a:focus,
-.footer-nav a:active {
-    color: #ffbc9e;
-    border-color: rgba(255, 188, 158, 0.3);
-}
-
 .footer-copyright {
     width: 190px;
     margin-left: auto;
@@ -1122,13 +1131,6 @@ fieldset {
     font-weight: 400;
     margin: 0;
     padding: 0;
-}
-
-.footer-copyright a:hover,
-.footer-copyright a:focus,
-.footer-copyright a:active {
-    color: #ffbc9e;
-    border-color: rgba(255, 188, 158, 0.3);
 }
 
 .modal {
