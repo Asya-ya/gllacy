@@ -781,7 +781,7 @@ fieldset {
 }
 
 .product-item:hover,
-.product-item:focus {
+.product-item:focus-within {
     z-index: 6;
 }
 
@@ -1795,54 +1795,44 @@ fieldset {
     position: relative;
 }
 
-.pagination-list li:first-child::before,
-.pagination-list li:last-child::after {
-    content: "";
+.pagination-list .pagination-arrow {
     position: absolute;
-    width: 8px;
-    height: 12px;
+    display: inline-block;
+    width: 9px;
+    height: 14px;
     background-image: url(../img/right-arrow.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
 }
 
-.pagination-list li:first-child::before {
-    transform: rotate(180deg);
-    top: 8px;
-    left: 0px;
+.pagination-list .arrow-left {
+    top: 6px;
+    left: -24px;
+    transform: scale(-1, 1);
     opacity: 0.2;
 }
 
-.pagination-list li:last-child::after {
-    top: 9px;
-    right: 0px;
-    cursor: pointer;
+.pagination-list .arrow-right {
+    top: 7px;
+    left: 10px;
 }
 
-.pagination-list li:first-child {
-    padding-left: 16px;
-}
-
-.pagination-list li:last-child {
-    padding-right: 16px;
-}
-
-.pagination-list a {
+.pagination-list .pagination-item {
     display: block;
     margin-right: 4px;
     padding: 2px 9px 2px 8px;
     border-radius: 50%;
 }
 
-.pagination-list li:last-child a {
-    margin-right: 0;
-}
-
-.pagination-list a:not(.pagination-current):hover,
-.pagination-list a:not(.pagination-current):focus {
+.pagination-list .pagination-item:not(.pagination-current):hover,
+.pagination-list .pagination-item:not(.pagination-current):focus {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
 .pagination-current,
-.pagination-list a:not(.pagination-current):active {
+.pagination-list .pagination-item:not(.pagination-current):active {
     background-color: #ffffff;
     color: #323232;
 }
