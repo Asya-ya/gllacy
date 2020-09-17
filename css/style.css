@@ -32,6 +32,8 @@ fieldset {
     background-image: url(../img/slide-1.png);
     background-repeat: no-repeat;
     background-position: top center;
+    -webkit-transition: background-color, 0.35s;
+    -o-transition: background-color, 0.35s;
     transition: background-color, 0.35s;
 }
 
@@ -58,9 +60,9 @@ fieldset {
     color: #fefefe;
     cursor: pointer;
 
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(231,74,53)), to(rgb(242,104,67)));
-
     background-image: -o-linear-gradient(bottom, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(231,74,53)), to(rgb(242,104,67)));
 
     background-image: linear-gradient(to top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
     -webkit-box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
@@ -103,8 +105,8 @@ fieldset {
 
 .button:active {
     outline: none;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(231,74,53)), to(rgb(242,104,67)));
     background-image: -o-linear-gradient(top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(231,74,53)), to(rgb(242,104,67)));
     background-image: linear-gradient(to bottom, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
     -webkit-box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
             box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
@@ -350,8 +352,10 @@ fieldset {
     top: 51px;
     right: 0;
     min-width: 540px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 26px 34px 20px 20px;
+    z-index: 2;
 }
 
 .basket-block,
@@ -398,17 +402,23 @@ fieldset {
 }
 
 .product-delete::before {
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 
 .product-delete::after {
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }
 
 .product-delete:hover::before,
 .product-delete:hover::after {
-    animation-name: rotate;
-    animation-duration: 0.25s;
+    -webkit-animation-name: rotate;
+            animation-name: rotate;
+    -webkit-animation-duration: 0.25s;
+            animation-duration: 0.25s;
 } 
 
 .basket-product-name,
@@ -562,7 +572,8 @@ fieldset {
 
     min-width: 277px;
     padding: 20px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     z-index: 5;
 }
 
@@ -574,14 +585,22 @@ fieldset {
 .entry-form input {
     width: 100%;
     padding: 13px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .links-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 
 .links-wrap .button {
@@ -628,7 +647,7 @@ fieldset {
     font-size: 60px;
     line-height: 60.35px;
     font-weight: 700;
-    width: 670px;
+    width: 672px;
     margin: 0 auto;
     margin-bottom: 30px;
 }
@@ -761,7 +780,8 @@ fieldset {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .catalog-list {
@@ -780,7 +800,10 @@ fieldset {
     margin-bottom: 40px;
 }
 
-.product-item:hover,
+.product-item:hover {
+    z-index: 6;
+}
+
 .product-item:focus-within {
     z-index: 6;
 }
@@ -801,11 +824,15 @@ fieldset {
 }
 
 .product-item:hover::after,
-.product-item:focus-within::after,
 .product-item:active::after,
 .product-item:hover .fast-view,
-.product-item:focus-within .fast-view,
 .product-item:active .fast-view {
+    display: block;
+    opacity: 1;
+}
+
+.product-item:focus-within::after,
+.product-item:focus-within .fast-view {
     display: block;
     opacity: 1;
 }
@@ -847,7 +874,9 @@ fieldset {
 }
 
 .product-item img {
-    transform: scale(1.017);
+    -webkit-transform: scale(1.017);
+        -ms-transform: scale(1.017);
+            transform: scale(1.017);
     position: relative;
     z-index: 4;
 }
@@ -1313,7 +1342,9 @@ fieldset {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 
     background-color: #f8f7f4;
     border-radius: 6px;
@@ -1327,7 +1358,8 @@ fieldset {
 
 .modal-feedback {
     width: 477px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 17px 25px 27px 25px;
 }
 
@@ -1360,13 +1392,15 @@ fieldset {
 
 .modal input {
     width: 267px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .modal textarea {
     width: 100%;
     height: 155px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .modal input:hover, 
@@ -1446,16 +1480,22 @@ fieldset {
 }
 
 .modal-close::before {
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
   
 .modal-close::after {
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }
 
 .modal-close:hover {
-    animation-name: rotate;
-    animation-duration: 0.25s;
+    -webkit-animation-name: rotate;
+            animation-name: rotate;
+    -webkit-animation-duration: 0.25s;
+            animation-duration: 0.25s;
 }
 
 .overlay {
@@ -1476,8 +1516,10 @@ fieldset {
 }
 
 .modal-show-animate {
-    animation-name: blur;
-    animation-duration: 0.5s;
+    -webkit-animation-name: blur;
+            animation-name: blur;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
 }
 
 .breadcrumbs {
@@ -1520,9 +1562,14 @@ fieldset {
 }
 
 .filters-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 24px;
 }
 
@@ -1558,7 +1605,9 @@ fieldset {
 }
 
 .filters-form select {
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     padding: 9px 32px 9px 16px;
 }
 
@@ -1568,6 +1617,15 @@ fieldset {
 
 .select-wrap:hover select {
     color: #323232;
+}
+
+.select-wrap option {
+    color: #323232;
+}
+
+/*for IE 11*/
+select::-ms-expand {
+    display: none;
 }
 
 .range-filter .filters-wrap {
@@ -1580,7 +1638,9 @@ fieldset {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     width: 176px;
     height: 4px;
     background-color: rgba(248, 247, 244, 0.5);
@@ -1597,7 +1657,9 @@ fieldset {
 .range .toddler {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     width: 4px;
     height: 4px;
     background-color: #ababab;
@@ -1640,7 +1702,9 @@ fieldset {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     width: 8px;
     height: 8px;
     background-color: #ffffff;
@@ -1756,7 +1820,8 @@ fieldset {
 }
 
 .filters-btn {
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     font: inherit;
     color: #ffffff;
     background-color: rgba(255, 255, 255, 0.2);
@@ -1776,7 +1841,8 @@ fieldset {
 .filters-btn:active {
     background-color: rgb(237, 237, 237);
     border: 0;
-    box-shadow: inset 0 2px 1px 0 #696969;
+    -webkit-box-shadow: inset 0 2px 1px 0 #696969;
+            box-shadow: inset 0 2px 1px 0 #696969;
     padding: 7px 29px;
 }
 
@@ -1785,9 +1851,16 @@ fieldset {
 }
 
 .pagination-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     position: relative;
 }
 
@@ -1810,7 +1883,9 @@ fieldset {
 .pagination-list .arrow-left {
     top: 6px;
     left: -24px;
-    transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+        -ms-transform: scale(-1, 1);
+            transform: scale(-1, 1);
     opacity: 0.2;
 }
 
@@ -1841,16 +1916,30 @@ main.container {
     border-bottom: 1px solid rgb(255, 255, 255, 0.3);
 }
 
+@-webkit-keyframes blur {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 @keyframes blur {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
+@-webkit-keyframes rotate {
+    0% { -webkit-transform: rotate(0); transform: rotate(0); }
+    20% { -webkit-transform: rotate(36deg); transform: rotate(36deg); }
+    40% { -webkit-transform: rotate(72deg); transform: rotate(72deg); }
+    60% { -webkit-transform: rotate(108deg); transform: rotate(108deg); }
+    80% { -webkit-transform: rotate(144deg); transform: rotate(144deg); }
+    100% { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+}
+
 @keyframes rotate {
-    0% { transform: rotate(0); }
-    20% { transform: rotate(36deg); }
-    40% { transform: rotate(72deg); }
-    60% { transform: rotate(108deg); }
-    80% { transform: rotate(144deg); }
-    100% { transform: rotate(180deg); }
+    0% { -webkit-transform: rotate(0); transform: rotate(0); }
+    20% { -webkit-transform: rotate(36deg); transform: rotate(36deg); }
+    40% { -webkit-transform: rotate(72deg); transform: rotate(72deg); }
+    60% { -webkit-transform: rotate(108deg); transform: rotate(108deg); }
+    80% { -webkit-transform: rotate(144deg); transform: rotate(144deg); }
+    100% { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
 }
